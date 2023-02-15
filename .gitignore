@@ -38,7 +38,7 @@ Thumbs.db
 # Applications
 *.app
 *.exe
-*.war
+*.wargit 
 
 # Large media files
 *.mp4

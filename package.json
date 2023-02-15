@@ -1,10 +1,15 @@
 {
+  "homepage":"https://github.com/Monalkumar/Namaste-React-05",
   "name": "namaste-react-05",
   "version": "1.0.0",
   "description": "Assignment_05",
   "scripts": {
     "test": "jest",
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "parcel build index.html"
+   
   },
   "author": "Monal Kumar",
   "license": "ISC",

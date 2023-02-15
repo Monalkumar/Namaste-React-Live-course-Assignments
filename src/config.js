@@ -1,46 +1,8 @@
-import React from "react";
+//Here we have to put all the hard coded things
 
-import ReactDOM, {createRoot} from "react-dom/client";
- 
-const Title=()=>{
-    return(
-        
-        <a href="/">
-      <img className="logo" alt="logo" src="https://img.freepik.com/free-vector/hand-drawn-world-food-day_23-2148289851.jpg?w=2000"/>
-      </a>
-      
-    )
-};
+export const IMG_CDN_URL="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"
 
-import ReactDOM from "react-dom/client";
-
-
-
-const Header=()=>{
-    return(
-        <div className="header">
-       
-        <Title/>
-        <div className="nav-items">
-        <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Cart</li>
-        </ul>
-        </div>
-       
-        </div>
-        )
-    }
-
-   
-// config driven ui
-
-
-
-
-const restaurenlist=[
+export const restaurenlist=[
     {
         "cardType": "restaurant",
         "layoutAlignmentType": "VERTICAL",
@@ -1161,63 +1123,3 @@ const restaurenlist=[
     },
     ]
     
-
-
-
-
-    const RestaurentCard=({name,cuisines,locality,cloudinaryImageId})=>{
-    
-    return(
-            <div className="card">
-            <img src={
-            "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + cloudinaryImageId}/>
-            <h5>{name}</h5>
-            <h5>{cuisines}</h5>
-            <h5>{locality}</h5>
-           
-            </div>
-
-        )
-    }
-
-    const Body=()=>{
-        return(
-            
-            <div className="res-list">
-           {
-            restaurenlist.map((restaurant)=>{
-                return(
-                    <RestaurentCard{...restaurant.data.data} key={restaurant.data.id} />
-                )
-            })
-           }
-            </div>
-           
-        )
-    }
-
-
-    const Footer=()=>{
-        return(
-            
-            <h3>Footer</h3>
-            
-        )
-    }
-
-    
-const AppLayout=()=>{
-            return(
-                <React.Fragment>
-                <Header/>
-                <Body/>
-                <Footer/>
-                
-                </React.Fragment>
-            )
-        }
-  
-
-
-const root= ReactDOM.createRoot(document.getElementById("root"))
-root.render(<AppLayout/>)
