@@ -1,5 +1,5 @@
 {
-  "homepage":"https://github.com/Monalkumar/Namaste-React-05",
+  "homepage": "https://github.com/Monalkumar/Namaste-React-05",
   "name": "namaste-react-05",
   "version": "1.0.0",
   "description": "Assignment_05",
@@ -9,7 +9,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "parcel build index.html"
-   
   },
   "author": "Monal Kumar",
   "license": "ISC",
@@ -20,6 +19,7 @@
   "dependencies": {
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-shimmer": "^3.2.0"
   }
 }
