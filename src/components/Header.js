@@ -1,4 +1,5 @@
-import {React,useState} from "react";
+import {React,useEffect,useState} from "react";
+import { Link } from "react-router-dom";
 const Title=()=>(
     
         
@@ -11,17 +12,24 @@ const Title=()=>(
 
 
 const Header=()=>{
+const [islogedIn, setIsLoggedIn]=useState(false);
 
-    const [islogedIn, setIsLoggedIn]=useState(false)
+useEffect(()=>{
+
+    console.log("useEffect")
+    
+    },[])
+    
+    console.log("render")
     return(
         <div className="header">
        
         <Title/>
         <div className="nav-items">
         <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
         <li>Cart</li>
         </ul>
         </div>
